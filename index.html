@@ -15,8 +15,95 @@
 
 <body>
   <header>
-    <h1>My Resume</h1>
-    <p></p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
+
+  <div class="intro">
+    <div class="intro-img">
+      <img src="images/milo.jpg">
+    </div>
+    <div class="intro-row-one">
+      <h1>Milo Samec - Front-End Web Developer</h1>
+      <h2>Technology is my jam!</h2>
+    </div>
+    <hr>
+    <div class="intro-row-two">
+      <p>Occasionally I have time to work on side projects, if you're interested, let me know by signing up on this website. </p>
+    </div>
+    <button>Lets Team Up</button>
+  </div>
+
+  <div class="skills">
+    <div class="skills-one">
+      <h3>Listen Up...</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>
+    </div>
+    <div class="skills-two">
+      <h3>Stuff I'm Good At:</h3>
+      <ul>
+        <li>Disc Golf</li>
+        <li>Coding up UI</li>
+        <li>Playing lots of video games</li>
+        <li>Using bootstrap grid</li>
+        <li>Taking long naps</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Work History</h4>
+  <table>
+    <tr>
+      <th>Yrs</th>
+      <th>Company</th>
+      <th>Title</th>
+      <th>Tech Used</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Apple</td>
+      <td>Software Engineer</td>
+      <td>Swift</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Microsoft</td>
+      <td>Software Engineer</td>
+      <td>.NET</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Amazon</td>
+      <td>Dev Ops</td>
+      <td>AWS</td>
+    </tr>
+  </table>
+
+  <div class="contact">
+    <h3>Contact Me</h3>
+    <form action="#">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your Name..">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+      </select>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px"></textarea>
+      <input type="submit" value="Submit">
+      </form>
+  </div>
+
+  <div class="footer-cont">
+    <p>Copyright Milo Samec 2020</p>
+  </div>
+
 </body>
 </html>
