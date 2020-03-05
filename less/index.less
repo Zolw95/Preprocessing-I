@@ -61,6 +61,16 @@ table {
 html, body {
     height: 100%;
 }
+// MIX INS //
+
+.margin() { // Margin-left and right 3%
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.btn-color() {
+	background-color: #4CAF50;
+}
 
 // NAV //
 
@@ -71,11 +81,16 @@ header {
 		justify-content: flex-end;
 		a {
 			margin: 3% 0;
-			padding-right: 0%;
+			padding-right: 0;
 			padding-left: 3%;
 			text-decoration: none;
 			color: black;
 		}
+		@media ( max-width: 500px ) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		  }
 	}
 }
 
@@ -93,20 +108,17 @@ div.intro {
 		height: 250px;
 		width: 250px;
 		margin-top: 10%;
-		margin-left: 3%;
-		margin-right: 3%;
+		.margin();
 	}
 	.intro-row-one {
 		h1 {
-			margin-left: 3%;
-			margin-right: 3%;
+			.margin();
 			font-size: 3rem;
 			margin-bottom: 2%;
 		}
 
 		h2 {
-			margin-left: 3%;
-			margin-right: 3%;
+			.margin();
 			font-size: 1.5rem;
 			margin-bottom: 3%;
 		}
@@ -114,22 +126,28 @@ div.intro {
 	.intro-row-two {
 		p {
 			margin-top: 3%;
-			margin-left: 3%;
-			margin-right: 3%;
+			.margin();
 		}
 	}
 	button {
 		font-size: 1rem;
 		padding: 1% 2%;
 		margin-top: 2%;
-		margin-left: 3%;
-		margin-right: 3%;
+		.margin();
 		color: white;
 		font-weight: bold;
 		border-radius: 3px;
 		background-color: grey;
 		border: 1px solid grey;
 	}
+	@media ( max-width: 500px ) {
+		text-align: center;
+		height: 65vh;
+		.intro-row-one h1 {
+			font-size: 1.2rem;
+			margin-top: 2%;
+		}
+	  }
 }
 
 div.skills {
@@ -138,7 +156,7 @@ div.skills {
 	margin-bottom: 5%;
 	.skills-one {
 		width: 48%;
-		padding-right: 2%;
+		margin-right: 5%;
 		p {
 			font-size: 1rem;
 		}
@@ -159,12 +177,28 @@ div.skills {
 			font-size: 1.5rem;
 			padding-bottom: 2%;
 		} //  //
-	} //  //
+	}
+	@media ( max-width: 500px ) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.skills-one, .skills-two {
+			width: 100%;
+			margin: 0;
+			padding-bottom: 5%;
+			h3 {
+				text-align: center;
+			}
+		}
+	  } //  //
 } //  //
 
 h4 {
 	font-size: 1.5rem;
 	padding-bottom: 2%;
+	@media ( max-width: 500px ) {
+		text-align: center;
+	  }
 }
 
 
@@ -189,7 +223,7 @@ div.footer-cont {
 }
 
 div.contact {
-	margin-top: 20%;
+	margin-top: 5%;
 	background:#e8ecef
 }
 
@@ -205,7 +239,8 @@ input[type=text], select, textarea {
   }
 
 input[type=submit] {
-	background-color: #4CAF50;
+	.btn-color();
+	margin-left: 45%;
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -214,11 +249,12 @@ input[type=submit] {
   }
 
   input[type=submit]:hover {
-	background-color: #45a049;
+	.btn-color();
   }
 
   div.contact h3 {
 	  font-size: 2rem;
 	  text-align: center;
 	  margin-bottom: 5%;
+	  padding-top: 5%;
   }
