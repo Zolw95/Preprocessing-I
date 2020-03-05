@@ -68,8 +68,11 @@ html, body {
 	margin-right: 3%;
 }
 
-.btn-color() {
-	background-color: #4CAF50;
+@btn-color: #4CAF50;
+
+.column() {
+	display: flex;
+	flex-direction: column;
 }
 
 // NAV //
@@ -87,8 +90,7 @@ header {
 			color: black;
 		}
 		@media ( max-width: 500px ) {
-			display: flex;
-			flex-direction: column;
+			.column();
 			align-items: center;
 		  }
 	}
@@ -179,8 +181,7 @@ div.skills {
 		} //  //
 	}
 	@media ( max-width: 500px ) {
-		display: flex;
-		flex-direction: column;
+		.column();
 		align-items: center;
 		.skills-one, .skills-two {
 			width: 100%;
@@ -239,7 +240,7 @@ input[type=text], select, textarea {
   }
 
 input[type=submit] {
-	.btn-color();
+	@btn-color;
 	margin-left: 45%;
 	color: white;
 	padding: 12px 20px;
@@ -249,7 +250,7 @@ input[type=submit] {
   }
 
   input[type=submit]:hover {
-	.btn-color();
+	@btn-color;
   }
 
   div.contact h3 {
