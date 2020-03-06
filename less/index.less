@@ -61,19 +61,21 @@ table {
 html, body {
     height: 100%;
 }
-// MIX INS //
+// MIX INS  and VARIABLE//
 
 .margin() { // Margin-left and right 3%
 	margin-left: 3%;
 	margin-right: 3%;
 }
 
-@btn-color: #4CAF50;
-
 .column() {
 	display: flex;
 	flex-direction: column;
 }
+
+@btn-color: #4CAF50;
+
+@h3-size: 2rem;
 
 // NAV //
 
@@ -83,7 +85,7 @@ header {
 		display: flex;
 		justify-content: flex-end;
 		a {
-			margin: 3% 0;
+			margin: 3% 2%;
 			padding-right: 0;
 			padding-left: 3%;
 			text-decoration: none;
@@ -108,10 +110,11 @@ div.intro {
 
 	img {
 		height: 250px;
-		width: 250px;
+		width: auto;
 		margin-top: 10%;
 		.margin();
 	}
+
 	.intro-row-one {
 		h1 {
 			.margin();
@@ -163,7 +166,7 @@ div.skills {
 			font-size: 1rem;
 		}
 		h3 {
-			font-size: 2rem;
+			font-size: @h3-size;
 			padding-bottom: 2%;
 		}
 	}
@@ -240,21 +243,24 @@ input[type=text], select, textarea {
   }
 
 input[type=submit] {
-	@btn-color;
+	background-color: @btn-color;
 	margin-left: 45%;
 	color: white;
 	padding: 12px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+	@media ( max-width: 500px ) {
+			margin-left: 38%;
+	}
   }
 
   input[type=submit]:hover {
-	@btn-color;
+	background-color: @btn-color;
   }
 
   div.contact h3 {
-	  font-size: 2rem;
+	  font-size: @h3-size;
 	  text-align: center;
 	  margin-bottom: 5%;
 	  padding-top: 5%;

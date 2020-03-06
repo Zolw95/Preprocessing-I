@@ -147,7 +147,7 @@ header nav {
   justify-content: flex-end;
 }
 header nav a {
-  margin: 3% 0;
+  margin: 3% 2%;
   padding-right: 0;
   padding-left: 3%;
   text-decoration: none;
@@ -170,7 +170,7 @@ div.intro hr {
 }
 div.intro img {
   height: 250px;
-  width: 250px;
+  width: auto;
   margin-top: 10%;
   margin-left: 3%;
   margin-right: 3%;
@@ -312,6 +312,11 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  input[type=submit] {
+    margin-left: 38%;
+  }
 }
 input[type=submit]:hover {
   background-color: #4CAF50;
